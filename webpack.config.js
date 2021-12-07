@@ -1,8 +1,8 @@
 module.exports = {
     mode: "development",
     module: {
-        // Loading Images
         rules: [
+            // Loading JavaScript
             {
               test: /\.js$/,
                 exclude: /node_modules/,
@@ -12,6 +12,7 @@ module.exports = {
                     }
                 ]
             },
+            // Loading Images
             {
                 test: /\.(png|jpg|jpeg|gif|ico)$/,
                 use: [
@@ -35,6 +36,23 @@ module.exports = {
                             name: '[name].[ext]'
                         }
                     }
+                ]
+            },
+            //Loading CSS
+            {
+                test: /\.(css)$/,
+                use: [
+                    {loader: "style-loader"},
+                    {loader: "css-loader"}
+                ]
+            },
+            //Loading SASS/SCSS
+            {
+                test: /\.(s[ca]ss)$/,
+                use: [
+                    {loader: "style-loader"},
+                    {loader: "css-loader"},
+                    {loader: 'sass-loader'}
                 ]
             }
         ]
