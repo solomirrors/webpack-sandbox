@@ -1,10 +1,5 @@
-class App {
-    run = async (name = 'World') => {
-        console.log(`Hello ${name}`)
-    }
-}
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-const app = new App();
-app.run()
-    .then(() => console.log('Done'))
-    .catch(() => console.log('Error'));
+const App = () => <p>Hello</p>;
+ReactDOM.render(<App/>, document.getElementById('root'))
