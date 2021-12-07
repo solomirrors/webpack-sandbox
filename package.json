@@ -7,5 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "solomirrors",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-block-scoping": "^7.16.0",
+    "@babel/plugin-transform-classes": "^7.16.0",
+    "@babel/plugin-transform-template-literals": "^7.16.0",
+    "@babel/preset-env": "^7.16.4"
+  }
 }
