@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
     mode: "development",
     module: {
@@ -45,5 +47,12 @@ module.exports = {
                 use: [ "style-loader", "css-loader", "sass-loader"]
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: "Webpack World",
+            buildTime: new Date().toString(),
+            template: "public/index.html"
+        })
+    ]
 }
